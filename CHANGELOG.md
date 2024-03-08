@@ -1,4 +1,4 @@
-# @digitalbazaar/vc-bitstring-status-list ChangeLog
+# @digitalcredentials/vc-bitstring-status-list ChangeLog
 
 ## 1.0.0 - 2024-xx-xx
 
