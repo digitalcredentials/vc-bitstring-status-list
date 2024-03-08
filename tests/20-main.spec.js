@@ -1,7 +1,7 @@
 /*!
  * Copyright (c) 2022 Digital Bazaar, Inc. All rights reserved.
  */
-import * as didKey from '@digitalbazaar/did-method-key';
+import * as didKey from '@digitalcredentials/did-method-key';
 import {
   assertBitstringStatusListContext,
   checkStatus,
@@ -12,7 +12,7 @@ import {
   statusTypeMatches,
   VC_BSL_VC_V1_CONTEXT
 } from '../lib/index.js';
-import {defaultDocumentLoader, issue} from '@digitalbazaar/vc';
+import {defaultDocumentLoader, issue} from '@digitalcredentials/vc';
 import {
   CONTEXT as VC_BSL_V1_CONTEXT,
   CONTEXT_URL as VC_BSL_V1_CONTEXT_URL
@@ -20,9 +20,9 @@ import {
 import {
   createMockBitstringStatusListCredential
 } from './mock-sl-credentials.js';
-import {Ed25519Signature2020} from '@digitalbazaar/ed25519-signature-2020';
+import {Ed25519Signature2020} from '@digitalcredentials/ed25519-signature-2020';
 import {Ed25519VerificationKey2020} from
-  '@digitalbazaar/ed25519-verification-key-2020';
+  '@digitalcredentials/ed25519-verification-key-2020';
 import jsigs from 'jsonld-signatures';
 import suiteCtx2020 from 'ed25519-signature-2020-context';
 

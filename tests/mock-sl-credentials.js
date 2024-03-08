@@ -1,10 +1,10 @@
 /*!
  * Copyright (c) 2022-2024 Digital Bazaar, Inc. All rights reserved.
  */
-import {Ed25519Signature2020} from '@digitalbazaar/ed25519-signature-2020';
+import {Ed25519Signature2020} from '@digitalcredentials/ed25519-signature-2020';
 import {Ed25519VerificationKey2020} from
-  '@digitalbazaar/ed25519-verification-key-2020';
-import {issue} from '@digitalbazaar/vc';
+  '@digitalcredentials/ed25519-verification-key-2020';
+import {issue} from '@digitalcredentials/vc';
 import suiteCtx2020 from 'ed25519-signature-2020-context';
 
 const SUITE_CONTEXT_URL = suiteCtx2020.constants.CONTEXT_URL;

@@ -1,4 +1,4 @@
-# @digitalbazaar/vc-bitstring-status-list
+# @digitalcredentials/vc-bitstring-status-list
 
 [Verifiable Credential Bitstring Status List](https://github.com/w3c/vc-bitstring-status-list/)
 
@@ -10,12 +10,12 @@ import {
   createCredential,
   VC_BSL_VC_V1_CONTEXT,
   VC_BSL_VC_V2_CONTEXT
-} from '@digitalbazaar/vc-bitstring-status-last';
+} from '@digitalcredentials/vc-bitstring-status-last';
 import {documentLoader} from './path-to/document-loader.js';
-import {Ed25519Signature2020} from '@digitalbazaar/ed25519-signature-2020';
+import {Ed25519Signature2020} from '@digitalcredentials/ed25519-signature-2020';
 import {Ed25519VerificationKey2020} from
-  '@digitalbazaar/ed25519-verification-key-2020';
-import {issue} from '@digitalbazaar/vc';
+  '@digitalcredentials/ed25519-verification-key-2020';
+import {issue} from '@digitalcredentials/vc';
 
 // Issuer Setup
 const key = new Ed25519VerificationKey2020({
