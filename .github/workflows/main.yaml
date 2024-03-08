@@ -33,7 +33,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: npm install
     - name: Run test with Node.js ${{ matrix.node-version }}
-      run: npm run test-node
+      run: npm run pretest; npm run test-node; npm run posttest
   test-karma:
     needs: [lint]
     runs-on: ubuntu-latest
@@ -49,25 +49,26 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: npm install
     - name: Run karma tests
-      run: npm run test-karma
-  coverage:
-    needs: [test-node, test-karma]
-    runs-on: ubuntu-latest
-    timeout-minutes: 10
-    strategy:
-      matrix:
-        node-version: [20.x]
-    steps:
-    - uses: actions/checkout@v4
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v4
-      with:
-        node-version: ${{ matrix.node-version }}
-    - run: npm install
-    - name: Generate coverage report
-      run: npm run coverage-ci
-    - name: Upload coverage to Codecov
-      uses: codecov/codecov-action@v3
-      with:
-        file: ./coverage/lcov.info
-        fail_ci_if_error: true
+      run: npm run pretest; npm run test-karma; npm run posttest
+  # NOTE: This probably fails because the DCC has not setup a Codecov account
+  # coverage:
+  #   needs: [test-node, test-karma]
+  #   runs-on: ubuntu-latest
+  #   timeout-minutes: 10
+  #   strategy:
+  #     matrix:
+  #       node-version: [20.x]
+  #   steps:
+  #   - uses: actions/checkout@v4
+  #   - name: Use Node.js ${{ matrix.node-version }}
+  #     uses: actions/setup-node@v4
+  #     with:
+  #       node-version: ${{ matrix.node-version }}
+  #   - run: npm install
+  #   - name: Generate coverage report
+  #     run: npm run pretest; npm run coverage-ci; npm run posttest
+  #   - name: Upload coverage to Codecov
+  #     uses: codecov/codecov-action@v3
+  #     with:
+  #       file: ./coverage/lcov.info
+  #       fail_ci_if_error: true
