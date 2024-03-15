@@ -37,10 +37,10 @@
     "lint": "eslint --ext .cjs,.js ."
   },
   "dependencies": {
-    "@digitalbazaar/credentials-v2-context": "github:digitalbazaar/credentials-v2-context#main",
+    "@digitalbazaar/credentials-v2-context": "digitalbazaar/credentials-v2-context#main",
     "@digitalbazaar/vc-bitstring-status-list-context": "^1.0.0",
     "@digitalcredentials/bitstring": "^3.1.2",
-    "@digitalcredentials/vc": "github:digitalcredentials/vc#vc-2.0-time-props",
+    "@digitalcredentials/vc": "digitalcredentials/vc#vc-2.0-time-props",
     "credentials-context": "^2.0.0"
   },
   "devDependencies": {
